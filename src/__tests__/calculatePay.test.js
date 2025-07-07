@@ -7,7 +7,7 @@ describe("calculatePay - Family A", () => {
   });
 
   it("should calculate pay from 11pm to 1am correctly", () => {
-    const result = calculatePay("A", "5:00PM", "1:00AM");
+    const result = calculatePay("A", "11:00PM", "1:00AM");
     // 2 hours @ $20 = $40
     expect(result).toBe(40);
   });
@@ -26,8 +26,8 @@ describe("calculatePay - Family B", () => {
     expect(result).toBe(48);
   });
 
-  it("should calculate correct pay from 10pm to 11am", () => {
-    const result = calculatePay("B", "10:00PM", "11:00AM");
+  it("should calculate correct pay from 10pm to 11pm", () => {
+    const result = calculatePay("B", "10:00PM", "11:00PM");
     // 10pm–11am = 1h * 8 = 8
     expect(result).toBe(8);
   });
